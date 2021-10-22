@@ -11,7 +11,7 @@
 int main(int argc, const char * argv[]) {
     
     Vehicle v1;
-    Vehicle v2((Colour_t) Red);
+    Vehicle v2("maker");
     
     std::cout << "Hello, World Vehicles!\n";
     return 0;

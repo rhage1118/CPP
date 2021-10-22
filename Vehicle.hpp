@@ -19,9 +19,14 @@ typedef enum Colour {
 class Vehicle {
 public:
     Vehicle();
-    Vehicle(Colour_t color);
+    Vehicle(const char *const maker, Colour_t color=Green);
+    virtual ~Vehicle();
+    
+    virtual int x();
+    
 private:
-    Colour_t colour;
+    char*       maker;
+    Colour_t    colour;
 };
 
 #endif /* Vehicle_hpp */
