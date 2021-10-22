@@ -1,0 +1,15 @@
+# brew info llvm
+# export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+#
+# cmake -S . -B build_llvm --toolchain toolchain_llvm
+# cmake --build build_llvm -- "VERBOSE=1 -j4"
+#
+
+set(CMAKE_C_COMPILER "clang")
+set(CMAKE_CXX_COMPILER "clang++")
+
+set(CMAKE_C_FLAGS   "-I/opt/homebrew/opt/llvm/include/c++/v1/")
+set(CMAKE_CXX_FLAGS "-I/opt/homebrew/opt/llvm/include/c++/v1/")
+
+set(CMAKE_LINK_DIRECTORIES "/opt/homebrew/opt/llvm/lib")
+set(CMAKE_LINK_LIBRARIES "c++")

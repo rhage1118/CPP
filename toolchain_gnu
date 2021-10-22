@@ -1,0 +1,8 @@
+#
+# cmake -S . -B build_gnu --toolchain toolchain_gnu
+# cmake --build build_gnu -- "VERBOSE=1 -j4"
+#
+
+set(CMAKE_C_COMPILER "gcc")
+set(CMAKE_CXX_COMPILER "g++")
+
