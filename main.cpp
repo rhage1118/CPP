@@ -6,9 +6,13 @@
 //
 
 #include <iostream>
+#include "Vehicle.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    Vehicle v1;
+    Vehicle v2((Colour_t) Red);
+    
+    std::cout << "Hello, World Vehicles!\n";
     return 0;
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B2DD75BB27225EF80051C954 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2DD75BA27225EF80051C954 /* main.cpp */; };
+		B2DD75C9272263AC0051C954 /* Vehicle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2DD75C7272263AC0051C954 /* Vehicle.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B2DD75B727225EF80051C954 /* XCode_CPP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = XCode_CPP; path = /Users/rhage/Git_Local/XCode_CPP/build/Debug/XCode_CPP; sourceTree = "<absolute>"; };
 		B2DD75BA27225EF80051C954 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B2DD75C62722639C0051C954 /* XCode_CPP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XCode_CPP; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2DD75C7272263AC0051C954 /* Vehicle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vehicle.cpp; sourceTree = "<group>"; };
+		B2DD75C8272263AC0051C954 /* Vehicle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Vehicle.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +44,10 @@
 		B2DD75AE27225EF80051C954 = {
 			isa = PBXGroup;
 			children = (
+				B2DD75C7272263AC0051C954 /* Vehicle.cpp */,
+				B2DD75C8272263AC0051C954 /* Vehicle.hpp */,
 				B2DD75BA27225EF80051C954 /* main.cpp */,
+				B2DD75C62722639C0051C954 /* XCode_CPP */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,7 +68,7 @@
 			);
 			name = XCode_CPP;
 			productName = XCode_CPP;
-			productReference = B2DD75B727225EF80051C954 /* XCode_CPP */;
+			productReference = B2DD75C62722639C0051C954 /* XCode_CPP */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -101,6 +107,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2DD75C9272263AC0051C954 /* Vehicle.cpp in Sources */,
 				B2DD75BB27225EF80051C954 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
