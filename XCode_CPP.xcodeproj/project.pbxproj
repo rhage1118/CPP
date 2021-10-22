@@ -23,7 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B2DD75B727225EF80051C954 /* XCode_CPP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XCode_CPP; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2DD75B727225EF80051C954 /* XCode_CPP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = XCode_CPP; path = /Users/rhage/Git_Local/XCode_CPP/build/Debug/XCode_CPP; sourceTree = "<absolute>"; };
 		B2DD75BA27225EF80051C954 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,25 +41,8 @@
 		B2DD75AE27225EF80051C954 = {
 			isa = PBXGroup;
 			children = (
-				B2DD75B927225EF80051C954 /* XCode_CPP */,
-				B2DD75B827225EF80051C954 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		B2DD75B827225EF80051C954 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B2DD75B727225EF80051C954 /* XCode_CPP */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B2DD75B927225EF80051C954 /* XCode_CPP */ = {
-			isa = PBXGroup;
-			children = (
 				B2DD75BA27225EF80051C954 /* main.cpp */,
 			);
-			path = XCode_CPP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,7 +87,7 @@
 				Base,
 			);
 			mainGroup = B2DD75AE27225EF80051C954;
-			productRefGroup = B2DD75B827225EF80051C954 /* Products */;
+			productRefGroup = B2DD75AE27225EF80051C954;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
