@@ -11,18 +11,26 @@
 #include <stdio.h>
 
 typedef enum Colour {
-        Red = 1,
+        None = 0,
+        Red,
         Yellow,
         Green
 } Colour_t;
 
 class Vehicle {
 public:
-    Vehicle();
-    Vehicle(const char *const maker, Colour_t color=Green);
-    virtual ~Vehicle();
+    explicit Vehicle() noexcept;
+    explicit Vehicle(const char *const maker, const Colour_t color=None) noexcept;
     
-    virtual int x();
+    // Rule of Three
+    virtual ~Vehicle() noexcept;
+    Vehicle(const Vehicle& ohter) noexcept;
+    Vehicle& operator=(const Vehicle& other);
+    // Rule of Five
+    Vehicle(Vehicle&& other) noexcept;
+    Vehicle& operator=(Vehicle&& other) noexcept;
+    
+    virtual int move() const;
     
 private:
     char*       maker;
