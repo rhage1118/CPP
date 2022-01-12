@@ -8,7 +8,7 @@
 #ifndef Vehicle_hpp
 #define Vehicle_hpp
 
-#include <stdio.h>
+//#include "Wheel.h"
 
 typedef enum Colour {
         None = 0,
@@ -35,6 +35,7 @@ public:
 private:
     char*       maker;
     Colour_t    colour;
+//    Wheel       wheel[4];
 };
 
 #endif /* Vehicle_hpp */

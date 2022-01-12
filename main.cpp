@@ -13,15 +13,25 @@
 
 static void fn(Vehicle&& input)
 {
-    input.move();
+    // Since this function is passing an rvalue, we can steal the resource
+    // The move constructor will be invoked now, at the end... the resources will be destructed
+    Vehicle steal( std::move(input) );
+    
+    // do stuff
+    steal.move();
 }
 
 
 int main(int argc, const char * argv[]) {
     
+    Vehicle v1;
     Vehicle v2("c_maker", Red);
     Vehicle v3(v2);
-
+    
+    /*
+    Vehicle invalid = "c_maker";  <--- implicit call to constructor, not allowed since constructor is explicit
+    */
+    
     fn(std::move(v2));
     
     double y = gsl_sf_bessel_J0 (5);

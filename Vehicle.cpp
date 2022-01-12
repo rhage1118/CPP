@@ -13,6 +13,7 @@ Vehicle::Vehicle() noexcept :
     maker(nullptr),
     colour(None)
 {
+    std::cout << "default constructor" << std::endl;
 }
 
 Vehicle::Vehicle(const char *const maker, const Colour_t colour) noexcept :
@@ -30,7 +31,7 @@ Vehicle::Vehicle(const char *const maker, const Colour_t colour) noexcept :
 Vehicle::~Vehicle() noexcept
 {
     // Rule of Three: Destructor
-    std::cout << "desstructor" << std::endl;
+    std::cout << "destructor" << std::endl;
     
     delete [] maker;
 }
