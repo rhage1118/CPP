@@ -27,6 +27,8 @@ int main(int argc, const char * argv[]) {
     Vehicle v1;
     Vehicle v2("c_maker", Red);
     Vehicle v3(v2);
+
+    v1 = v2;
     
     /*
     Vehicle invalid = "c_maker";  <--- implicit call to constructor, not allowed since constructor is explicit

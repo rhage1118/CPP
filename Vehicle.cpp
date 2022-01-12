@@ -6,6 +6,7 @@
 //
 
 #include <iostream>
+#include <initializer_list>
 #include <string.h>
 #include "Vehicle.hpp"
 
@@ -34,6 +35,7 @@ Vehicle::~Vehicle() noexcept
     std::cout << "destructor" << std::endl;
     
     delete [] maker;
+    maker = nullptr;
 }
 
 Vehicle::Vehicle(const Vehicle& other) noexcept :
@@ -47,7 +49,7 @@ Vehicle& Vehicle::operator=(const Vehicle& other)
 {
     // Rule of Three: Copy Assignment
     std::cout << "copy assignment" << std::endl;
-    if (&other != this) {
+    if (this != &other) {
         delete [] maker;
 
         if (other.maker != nullptr) {
@@ -57,6 +59,10 @@ Vehicle& Vehicle::operator=(const Vehicle& other)
             maker = nullptr;
         }
         colour = other.colour;
+        
+        for(int i=0; i<4; i++) {
+            wheel[i] = other.wheel[i];
+        }
     }
     return *this;
 }
@@ -67,6 +73,11 @@ Vehicle::Vehicle(Vehicle&& other) noexcept :
 {
     // Rule of Five: Move Constructor
     std::cout << "move constructor" << std::endl;
+
+    for(int i=0; i<4; i++) {
+        wheel[i] = std::move(other.wheel[i]);
+    }
+    
     other.maker = nullptr;
     other.colour = None;
 }
@@ -82,7 +93,10 @@ Vehicle& Vehicle::operator=(Vehicle&& other) noexcept
     // steal other resource
     maker = std::move(other.maker);
     colour = std::move(other.colour);
-    
+    for(int i=0; i<4; i++) {
+        wheel[i] = std::move(other.wheel[i]);
+    }
+
     // empty other resource
     other.maker = nullptr;
     other.colour = None;

@@ -8,22 +8,22 @@
 #ifndef Wheel_hpp
 #define Wheel_hpp
 
+#include "Tire.hpp"
+
 class Wheel {
 public:
     // Default + Rule of Three
-    Wheel() noexcept = default;
-    Wheel(const Wheel&) noexcept = default;
-    ~Wheel() noexcept = default;
-    Wheel& operator=(const Wheel&) noexcept = default;
+    Wheel() noexcept;
+    Wheel(const Wheel&) noexcept;
+    ~Wheel() noexcept;
+    Wheel& operator=(const Wheel&) noexcept;
     // Rule of Five
-    Wheel(Wheel&&) noexcept = default;
-    Wheel& operator=(Wheel&&) noexcept = default;
+    Wheel(Wheel&&) noexcept;
+    Wheel& operator=(Wheel&&) noexcept;
     
     void display() const;
 private:
-    /*
     Tire    tire;
-    Rim     rim;*/
 };
 
 #endif /* Wheel_hpp */
