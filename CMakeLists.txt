@@ -8,7 +8,7 @@ SET(CMAKE_CXX_EXTENSIONS OFF)		# don't use compiler extensions, just CXX standar
 
 file(GLOB SRC *.cpp *.hpp)
 
-find_package(GSL REQUIRED)
+# find_package(GSL REQUIRED)
 
 # add the executable
 add_executable(${PROJECT_NAME} "${SRC}")

@@ -12,13 +12,13 @@ class Tire
 {
 public:
     // Default + Rule of Three
-    Tire() noexcept = default;
-    Tire(const Tire&) noexcept = default;
-    ~Tire() noexcept = default;
-    Tire& operator=(const Tire&) noexcept = default;
+    constexpr Tire() noexcept = default;
+    constexpr Tire(const Tire&) noexcept = default;
+    constexpr ~Tire() noexcept = default;
+    constexpr Tire& operator=(const Tire&) noexcept = default;
     // Rule of Five
-    Tire(Tire&&) noexcept = default;
-    Tire& operator=(Tire&&) noexcept = default;
+    constexpr Tire(Tire&&) noexcept = default;
+    constexpr Tire& operator=(Tire&&) noexcept = default;
 
 private:
 };

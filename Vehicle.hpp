@@ -24,7 +24,7 @@ public:
     
     // Rule of Three
     virtual ~Vehicle() noexcept;
-    Vehicle(const Vehicle& ohter) noexcept;
+    Vehicle(const Vehicle& other) noexcept;
     Vehicle& operator=(const Vehicle& other);
     // Rule of Five
     Vehicle(Vehicle&& other) noexcept;
