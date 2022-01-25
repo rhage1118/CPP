@@ -14,7 +14,7 @@ public:
     // Default + Rule of Three
     constexpr Tire() noexcept = default;
     constexpr Tire(const Tire&) noexcept = default;
-    constexpr ~Tire() noexcept = default;
+    ~Tire() noexcept = default;
     constexpr Tire& operator=(const Tire&) noexcept = default;
     // Rule of Five
     constexpr Tire(Tire&&) noexcept = default;
