@@ -9,6 +9,7 @@
 #include <typeinfo>
 
 #include "Vehicle.hpp"
+#include "Runner.hpp"
 
 #if 0
 // GNU Scientific Library
@@ -47,6 +48,8 @@ static void fn(Vehicle&& input)
 
 
 int main(int argc, const char * argv[]) {
+    
+    do_runners();
     
     Vehicle v1;
     Vehicle v2("c_maker", Red);

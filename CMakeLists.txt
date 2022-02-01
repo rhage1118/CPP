@@ -13,9 +13,14 @@ file(GLOB SRC *.cpp *.hpp)
 # add the executable
 add_executable(${PROJECT_NAME} "${SRC}")
 add_dependencies(${PROJECT_NAME} parts)
+add_dependencies(${PROJECT_NAME} thread)
 target_include_directories(${PROJECT_NAME} PUBLIC parts/include)
+target_include_directories(${PROJECT_NAME} PUBLIC thread/include)
 target_link_libraries(${PROJECT_NAME} PUBLIC parts)
+target_link_libraries(${PROJECT_NAME} PUBLIC thread)
 # target_link_libraries(${PROJECT_NAME} PUBLIC GSL::gsl parts)
 
 add_subdirectory(parts)
+add_subdirectory(thread)
+# add_subdirectory(modules)
 
