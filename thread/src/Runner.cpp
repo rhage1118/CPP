@@ -15,6 +15,9 @@
 #include <unistd.h>
 
 static std::barrier<> syncpoint(std::thread::hardware_concurrency());
+static std::barrier syncpoint_2(std::thread::hardware_concurrency(), []() noexcept {
+    std::cout << "completion function called" << std::endl;
+});
 
 static void run(std::shared_future<int>& runner_future)
 {
@@ -25,6 +28,8 @@ static void run(std::shared_future<int>& runner_future)
     
     syncpoint.arrive_and_wait();
     std::cout << "Thread " << pthread_self() << " done\n";
+
+    syncpoint_2.arrive_and_wait();
 }
 
 int do_runners(void)
