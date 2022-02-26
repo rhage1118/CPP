@@ -21,13 +21,18 @@ static std::barrier syncpoint_2(std::thread::hardware_concurrency(), []() noexce
 
 static void run(std::shared_future<int>& runner_future)
 {
+    static std::mutex mutex;
     runner_future.wait();
     
     int const sec = rand() % 10;
     sleep(sec);
     
     syncpoint.arrive_and_wait();
+    
+    // -fsanitize=thread listed the cout as a potential race between threads
+    mutex.lock();
     std::cout << "Thread " << pthread_self() << " done\n";
+    mutex.unlock();
 
     syncpoint_2.arrive_and_wait();
 }
