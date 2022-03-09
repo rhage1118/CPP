@@ -24,8 +24,9 @@ Vehicle::Vehicle(const char *const maker, const Colour_t colour) noexcept :
     if (maker == NULL) {
         this->maker = nullptr;
     } else {
-        this->maker = new char[strlen(maker) + 1];
-        strcpy(this->maker, maker);
+        size_t const len = strlen(maker);
+        this->maker = new char[len + 1];
+        snprintf(this->maker, len+1, "%s", maker);
     }
 }
 
@@ -53,8 +54,9 @@ Vehicle& Vehicle::operator=(const Vehicle& other)
         delete [] maker;
 
         if (other.maker != nullptr) {
-            maker = new char[strlen(other.maker) + 1];
-            strcpy(maker, other.maker);
+            size_t const len = strlen(other.maker);
+            maker = new char[len + 1];
+            snprintf(maker, len+1, "%s", other.maker);
         } else {
             maker = nullptr;
         }

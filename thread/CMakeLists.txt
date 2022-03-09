@@ -2,7 +2,7 @@
 add_library(thread SHARED)
 target_include_directories(thread
     PRIVATE include
-    PRIVATE "/opt/local/include/libcxx/v1/"
+#    PRIVATE "/opt/local/include/libcxx/v1/"
 )
 target_link_directories(thread
     PRIVATE /opt/local/lib/libcxx/
@@ -14,6 +14,6 @@ target_sources(thread
     PRIVATE src/Runner.cpp
 )
 
-set_source_files_properties(src/Runner.cpp PROPERTIES COMPILE_FLAGS "-nostdinc++")
+#set_source_files_properties(src/Runner.cpp PROPERTIES COMPILE_FLAGS "-nostdinc++")
 
 install(TARGETS thread)

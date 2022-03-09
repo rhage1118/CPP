@@ -11,7 +11,7 @@
 int
 DerivedVehicle::move() const
 {
-    std::cout << "DerivedVehicle::move()" << std::endl;
+    printf("DerivedVehicle::move()\n");
     return 0;
 }
 

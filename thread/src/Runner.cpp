@@ -13,6 +13,7 @@
 #include <list>
 #include <barrier>
 #include <unistd.h>
+#include <stdlib.h>
 
 static std::barrier<> syncpoint(std::thread::hardware_concurrency());
 static std::barrier syncpoint_2(std::thread::hardware_concurrency(), []() noexcept {
@@ -24,7 +25,7 @@ static void run(std::shared_future<int>& runner_future)
     static std::mutex mutex;
     runner_future.wait();
     
-    int const sec = rand() % 10;
+    int const sec = arc4random() % 10;
     sleep(sec);
     
     syncpoint.arrive_and_wait();

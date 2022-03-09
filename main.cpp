@@ -4,13 +4,15 @@
 //
 //  Created by Ramsey Hage on 2021-10-21.
 //
+//  /usr/local/opt/llvm/bin/clang-tidy  -header-filter=.* --checks=.* *cpp -- -I/Users/rhage/Git_Local/thread/include -I/Users/rhage/Git_Local/parts/include  -std=c++20
+//
 
 #include <iostream>
 
 #include <typeinfo>
 
-#include "Vehicle.hpp"
 #include "Runner.hpp"
+#include "Vehicle.hpp"
 
 #if 0
 // GNU Scientific Library
@@ -48,7 +50,9 @@ static void fn(Vehicle&& input)
 }
 
 
-int main(int argc, const char * argv[]) {
+auto main(__attribute__((unused)) int argc,
+          __attribute__((unused)) const char * argv[]) -> int
+{
     
     do_runners();
     
