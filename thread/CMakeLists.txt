@@ -2,8 +2,9 @@
 add_library(thread SHARED)
 target_include_directories(thread
     PRIVATE include
+#    PRIVATE /opt/homebrew/opt/llvm/include/c++/v1/
 )
-target_link_libraries(thread c++)
+#target_link_libraries(thread c++)
 
 target_sources(thread
     PRIVATE include/Runner.hpp
