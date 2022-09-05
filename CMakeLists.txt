@@ -33,6 +33,8 @@ target_sources(magic_proof
     PRIVATE DerivedVehicle.cpp
     PRIVATE Vehicle.cpp
     PRIVATE main.cpp
+    PRIVATE toolchain_gnu
+    PRIVATE toolchain_llvm
 )
 
 #set_source_files_properties(main.cpp PROPERTIES COMPILE_FLAGS  "-fmodules -fmodules-ts  -fprebuilt-module-path=cpp20/CMakeFiles/cpp20.dir/ -fimplicit-modules -fimplicit-module-maps")
